@@ -13,8 +13,8 @@ def go_to_cafe(friends: list, cafe: Cafe) -> str:
         except NotWearingMaskError:
             unmasked_count += 1
 
-    if unvaccinated_count > 0:
+    if unvaccinated_count:
         return "All friends should be vaccinated"
-    if unmasked_count > 0:
+    if unmasked_count:
         return f"Friends should buy {unmasked_count} masks"
     return f"Friends can go to {cafe.name}"
